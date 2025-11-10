@@ -29,7 +29,8 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#4ADE80",
+          DEFAULT: "hsl(var(--primary))",
+          glow: "hsl(var(--primary-glow))",
           foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
@@ -64,7 +65,16 @@ export default {
         }
       },
       animation: {
-        marquee: 'marquee 40s linear infinite'
+        marquee: 'marquee 40s linear infinite',
+        'float': 'float 3s ease-in-out infinite',
+        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+      },
+      boxShadow: {
+        'glow': '0 0 40px hsl(221 83% 53% / 0.3)',
+        'glow-lg': '0 0 60px hsl(221 83% 53% / 0.4)',
+      },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
       }
     },
   },

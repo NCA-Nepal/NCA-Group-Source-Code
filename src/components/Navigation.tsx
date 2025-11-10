@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Command, Menu } from "lucide-react";
+import { Shield, Menu } from "lucide-react";
 import { Button } from "./ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
 
@@ -40,9 +40,9 @@ const Navigation = () => {
   };
 
   const navItems = [
-    { name: "Features", href: "#features", onClick: () => scrollToSection('features') },
-    { name: "Prices", href: "#pricing", onClick: () => scrollToSection('pricing') },
-    { name: "Testimonials", href: "#testimonials", onClick: () => scrollToSection('testimonials') },
+    { name: "Services", href: "#services", onClick: () => scrollToSection('services') },
+    { name: "About", href: "#about", onClick: () => scrollToSection('about') },
+    { name: "Contact", href: "#contact", onClick: () => scrollToSection('contact') },
   ];
 
   return (
@@ -56,8 +56,8 @@ const Navigation = () => {
       <div className="mx-auto h-full px-6">
         <nav className="flex items-center justify-between h-full">
           <div className="flex items-center gap-2">
-            <Command className="w-5 h-5 text-primary" />
-            <span className="font-bold text-base">CryptoTrade</span>
+            <Shield className="w-5 h-5 text-primary" />
+            <span className="font-bold text-base">NCA Security</span>
           </div>
 
           {/* Desktop Navigation */}
@@ -78,11 +78,11 @@ const Navigation = () => {
               </a>
             ))}
             <Button 
-              onClick={() => scrollToSection('cta')}
+              onClick={() => window.open('https://calendly.com/rezydev/30min', '_blank')}
               size="sm"
               className="button-gradient"
             >
-              Start Trading
+              Book a Call
             </Button>
           </div>
 
@@ -115,11 +115,11 @@ const Navigation = () => {
                   <Button 
                     onClick={() => {
                       setIsMobileMenuOpen(false);
-                      scrollToSection('cta');
+                      window.open('https://calendly.com/rezydev/30min', '_blank');
                     }}
                     className="button-gradient mt-4"
                   >
-                    Start Trading
+                    Book a Call
                   </Button>
                 </div>
               </SheetContent>

@@ -1,11 +1,13 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Command } from "lucide-react";
+import { ArrowRight, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
-import { FeaturesSection } from "@/components/features/FeaturesSection";
-import { PricingSection } from "@/components/pricing/PricingSection";
-import LogoCarousel from "@/components/LogoCarousel";
+import { StatsSection } from "@/components/StatsSection";
+import { AboutMission } from "@/components/AboutMission";
+import { ServicesGrid } from "@/components/ServicesGrid";
+import { WhyChooseUs } from "@/components/WhyChooseUs";
 import TestimonialsSection from "@/components/TestimonialsSection";
+import { ContactSection } from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 
@@ -19,33 +21,34 @@ const Index = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="relative container px-4 pt-40 pb-20"
+        className="relative container px-4 pt-40 pb-20 overflow-hidden"
       >
-        {/* Background */}
-        <div 
-          className="absolute inset-0 -z-10 bg-[#0A0A0A]"
-        />
+        {/* Animated Background */}
+        <div className="absolute inset-0 -z-10">
+          <div className="absolute inset-0 bg-gradient-radial from-primary/10 via-transparent to-transparent opacity-50" />
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse-slow" />
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '1s' }} />
+        </div>
         
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
-          className="inline-block mb-4 px-4 py-1.5 rounded-full glass"
+          className="inline-block mb-6 px-4 py-1.5 rounded-full glass"
         >
           <span className="text-sm font-medium">
-            <Command className="w-4 h-4 inline-block mr-2" />
-            Next-gen crypto trading platform
+            <Shield className="w-4 h-4 inline-block mr-2" />
+            Next-gen cybersecurity protection
           </span>
         </motion.div>
         
-        <div className="max-w-4xl relative z-10">
-          <h1 className="text-5xl md:text-7xl font-normal mb-4 tracking-tight text-left">
-            <span className="text-gray-200">
-              <TextGenerateEffect words="Trade crypto with" />
-            </span>
+        <div className="max-w-5xl relative z-10">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight text-left leading-tight">
+            <span className="text-white">Securing Your </span>
+            <span className="text-gradient">Digital Frontier</span>
             <br />
-            <span className="text-white font-medium">
-              <TextGenerateEffect words="confidence & security" />
+            <span className="text-white">
+              Protect. Prevent. <span className="text-gradient">Prevail.</span>
             </span>
           </h1>
           
@@ -53,89 +56,117 @@ const Index = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl text-left"
+            className="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl text-left"
           >
-            Experience seamless cryptocurrency trading with advanced features, real-time analytics, and institutional-grade security.{" "}
-            <span className="text-white">Start trading in minutes.</span>
+            Your trusted cybersecurity partner providing enterprise-grade protection for digital assets, 
+            networks, and data —{" "}
+            <span className="text-white font-medium">from consultation to incident response.</span>
           </motion.p>
           
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
-            className="flex flex-col sm:flex-row gap-4 items-start"
+            className="flex flex-col sm:flex-row gap-4 items-start mb-16"
           >
-            <Button size="lg" className="button-gradient">
-              Start Trading Now
+            <Button 
+              size="lg" 
+              className="button-gradient"
+              onClick={() => window.open('https://calendly.com/rezydev/30min', '_blank')}
+            >
+              Book a Consultation →
             </Button>
-            <Button size="lg" variant="link" className="text-white">
-              View Markets <ArrowRight className="ml-2 w-4 h-4" />
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="border-primary/30 hover:border-primary hover:bg-primary/5"
+              onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              Explore Services
             </Button>
           </motion.div>
-        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6 }}
-          className="relative mx-auto max-w-5xl mt-20"
-        >
-          <div className="glass rounded-xl overflow-hidden">
-            <img
-              src="/lovable-uploads/c32c6788-5e4a-4fee-afee-604b03113c7f.png"
-              alt="CryptoTrade Dashboard"
-              className="w-full h-auto"
-            />
-          </div>
-        </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6 }}
+            className="relative mx-auto max-w-4xl"
+          >
+            <div className="glass rounded-2xl overflow-hidden cyber-glow p-4">
+              <img
+                src="https://placehold.co/1200x600/0a0a0a/4169e1?text=NCA+Security+Platform&font=raleway"
+                alt="NCA Security Dashboard"
+                className="w-full h-auto rounded-xl"
+              />
+            </div>
+          </motion.div>
+        </div>
       </motion.section>
 
-      {/* Logo Carousel */}
-      <LogoCarousel />
-
-      {/* Features Section */}
-      <div id="features" className="bg-black">
-        <FeaturesSection />
+      {/* Stats Section */}
+      <div className="bg-gradient-to-b from-black to-background">
+        <StatsSection />
       </div>
 
-      {/* Pricing Section */}
-      <div id="pricing" className="bg-black">
-        <PricingSection />
+      {/* About Mission Section */}
+      <div id="about" className="bg-background">
+        <AboutMission />
+      </div>
+
+      {/* Services Grid */}
+      <div className="bg-gradient-to-b from-background to-black">
+        <ServicesGrid />
+      </div>
+
+      {/* Why Choose Us */}
+      <div className="bg-black">
+        <WhyChooseUs />
       </div>
 
       {/* Testimonials Section */}
-      <div className="bg-black">
+      <div className="bg-gradient-to-b from-black to-background">
         <TestimonialsSection />
       </div>
 
       {/* CTA Section */}
-      <section className="container px-4 py-20 relative bg-black">
-        <div 
-          className="absolute inset-0 opacity-40"
-          style={{
-            backgroundImage: 'url("/lovable-uploads/21f3edfb-62b5-4e35-9d03-7339d803b980.png")',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-          }}
-        />
+      <section className="container px-4 py-24 relative bg-background">
+        <div className="absolute inset-0 bg-gradient-radial from-primary/10 via-transparent to-transparent opacity-30" />
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="bg-[#0A0A0A]/80 backdrop-blur-lg border border-white/10 rounded-2xl p-8 md:p-12 text-center relative z-10"
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="glass rounded-3xl p-12 md:p-16 text-center relative z-10 cyber-glow max-w-4xl mx-auto"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready to start trading?
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            Ready to <span className="text-gradient">Fortify Your Business?</span>
           </h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Join thousands of traders who have already discovered the power of our platform.
+            Book a free consultation and get expert insights into your organization's current security health.
           </p>
-          <Button size="lg" className="button-gradient">
-            Create Account
-            <ArrowRight className="ml-2 w-4 h-4" />
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button 
+              size="lg" 
+              className="button-gradient"
+              onClick={() => window.open('https://calendly.com/rezydev/30min', '_blank')}
+            >
+              Book a 30-Minute Call →
+            </Button>
+            <Button 
+              size="lg" 
+              variant="outline"
+              className="border-primary/30 hover:border-primary hover:bg-primary/5"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              Contact Us
+            </Button>
+          </div>
         </motion.div>
       </section>
+
+      {/* Contact Section */}
+      <div className="bg-gradient-to-b from-background to-black">
+        <ContactSection />
+      </div>
 
       {/* Footer */}
       <div className="bg-black">

@@ -7,39 +7,39 @@ import { Card } from "./ui/card";
 const testimonials = [
   {
     name: "Michael Chen",
-    role: "Professional Trader",
+    role: "CTO, Tech Enterprise",
     image: "https://avatars.githubusercontent.com/u/1234567?v=4",
-    content: "The real-time market data and advanced trading features have significantly improved my trading performance. The platform's security measures give me peace of mind."
+    content: "Our organization's security posture transformed completely after their assessment — highly recommended. The team's expertise in cloud security and incident response is unmatched."
   },
   {
     name: "Sarah Johnson",
-    role: "Crypto Fund Manager",
+    role: "CISO, Financial Services",
     image: "https://avatars.githubusercontent.com/u/2345678?v=4",
-    content: "CryptoTrade's institutional-grade tools have transformed our trading strategy. The API integration and automated features have saved us countless hours."
+    content: "NCA Security's proactive approach to threat detection and their 24/7 SOC operations have given us peace of mind. Their reports are detailed and actionable."
   },
   {
     name: "David Wilson",
-    role: "Early Crypto Investor",
+    role: "VP of Engineering, Healthcare",
     image: "https://avatars.githubusercontent.com/u/3456789?v=4",
-    content: "The customer support is exceptional, and the platform's intuitive design made getting started with crypto trading seamless. A game-changer for both beginners and pros."
+    content: "The VAPT assessment uncovered vulnerabilities we didn't know existed. Their red team assessment was thorough and professional. Compliance made simple."
   },
   {
     name: "Emily Zhang",
-    role: "DeFi Developer",
+    role: "Security Director, E-commerce",
     image: "https://avatars.githubusercontent.com/u/4567890?v=4",
-    content: "We've seen remarkable improvements in our trading efficiency since switching to CryptoTrade. The smart order routing and liquidity aggregation are particularly impressive."
+    content: "Working with NCA Security has been transformative. Their dark web monitoring caught a potential breach before it escalated. Exceptional service and expertise."
   },
   {
     name: "James Rodriguez",
-    role: "Crypto Security Expert",
+    role: "IT Manager, Manufacturing",
     image: "https://avatars.githubusercontent.com/u/5678901?v=4",
-    content: "The security features are robust and the regular updates keep us ahead of emerging threats. It's exactly what the crypto industry needed."
+    content: "Their incident response team is incredibly fast and efficient. When we faced a security incident, they contained it within hours. Professional and reliable."
   },
   {
     name: "Lisa Thompson",
-    role: "Portfolio Manager",
+    role: "Compliance Officer, FinTech",
     image: "https://avatars.githubusercontent.com/u/6789012?v=4",
-    content: "The platform's ability to handle complex trading strategies while maintaining simplicity in its interface is remarkable. It's been invaluable for our portfolio management."
+    content: "NCA Security helped us achieve ISO 27001 certification with minimal disruption. Their compliance expertise and structured approach made the entire process smooth."
   }
 ];
 
@@ -54,9 +54,9 @@ const TestimonialsSection = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl font-normal mb-4">Trusted by Traders</h2>
+          <h2 className="text-5xl font-normal mb-4">Trusted by <span className="text-gradient">Industry Leaders</span></h2>
           <p className="text-muted-foreground text-lg">
-            Join thousands of satisfied traders on CryptoTrade
+            Protecting organizations across multiple industries
           </p>
         </motion.div>
 
