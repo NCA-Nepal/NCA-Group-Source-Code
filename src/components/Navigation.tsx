@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
-import { Shield, Menu } from "lucide-react";
+import { Menu } from "lucide-react";
 import { Button } from "./ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
+import ncaLogo from "@/assets/nca-logo.png";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -40,7 +41,7 @@ const Navigation = () => {
   };
 
   const navItems = [
-    { name: "Services", href: "#services", onClick: () => scrollToSection('services') },
+    { name: "Services", href: "#security-services", onClick: () => scrollToSection('security-services') },
     { name: "About", href: "#about", onClick: () => scrollToSection('about') },
     { name: "Contact", href: "#contact", onClick: () => scrollToSection('contact') },
   ];
@@ -55,9 +56,9 @@ const Navigation = () => {
     >
       <div className="mx-auto h-full px-6">
         <nav className="flex items-center justify-between h-full">
-          <div className="flex items-center gap-2">
-            <Shield className="w-5 h-5 text-primary" />
-            <span className="font-bold text-base">NCA Security</span>
+          <div className="flex items-center gap-3">
+            <img src={ncaLogo} alt="NCA" className="w-8 h-8" />
+            <span className="font-bold text-lg text-gradient">NCA</span>
           </div>
 
           {/* Desktop Navigation */}

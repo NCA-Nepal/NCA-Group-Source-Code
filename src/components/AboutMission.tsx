@@ -18,12 +18,11 @@ export const AboutMission = () => {
           className="text-center mb-12"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Our Mission: Building Digital Trust <br />
-            <span className="text-gradient">Through Security</span>
+            Our Mission: Innovate Boldly, <br />
+            <span className="text-gradient">Secure Relentlessly</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            We deliver tailored cybersecurity solutions that combine human expertise, 
-            advanced technology, and continuous innovation to protect organizations of every scale.
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            We blend cutting-edge development with military-grade security — delivering solutions that don't just work today, but stand resilient tomorrow. Every line of code, every security layer, crafted with precision and purpose.
           </p>
         </motion.div>
 

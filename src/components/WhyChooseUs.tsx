@@ -2,11 +2,12 @@ import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 
 const reasons = [
-  "24/7 SOC & Threat Intelligence Operations",
-  "Certified Cybersecurity Specialists (CPTS, OSCP, ISO Lead Auditor)",
-  "Transparent & Actionable Reporting",
-  "Proven Results with Enterprise Clients",
-  "Tailored Security Strategy for Every Industry"
+  "End-to-end security woven into every development phase",
+  "Battle-tested solutions deployed across 100+ engagements",
+  "Elite team: CPTS, OSCP, ISO certified experts",
+  "24/7 threat monitoring with real-time incident response",
+  "From startup MVPs to enterprise-scale infrastructure",
+  "Transparent reporting that actually drives decisions"
 ];
 
 export const WhyChooseUs = () => {
@@ -19,8 +20,8 @@ export const WhyChooseUs = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-8">
-            Why Companies <br />
-            <span className="text-gradient">Trust Us</span>
+            Why Forward-Thinking Companies <br />
+            <span className="text-gradient">Choose NCA</span>
           </h2>
           
           <ul className="space-y-4">
