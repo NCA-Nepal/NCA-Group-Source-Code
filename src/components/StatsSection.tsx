@@ -1,6 +1,6 @@
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { Shield, AlertTriangle, Database } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 interface StatItemProps {
   icon: React.ElementType;
@@ -13,8 +13,12 @@ interface StatItemProps {
 
 const StatItem = ({ icon: Icon, value, suffix, label, prefix = "", delay }: StatItemProps) => {
   const [count, setCount] = useState(0);
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   useEffect(() => {
+    if (!isInView) return;
+    
     const duration = 2000;
     const steps = 60;
     const increment = value / steps;
@@ -32,10 +36,11 @@ const StatItem = ({ icon: Icon, value, suffix, label, prefix = "", delay }: Stat
     }, stepDuration);
 
     return () => clearInterval(timer);
-  }, [value]);
+  }, [value, isInView]);
 
   return (
     <motion.div
+      ref={ref}
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -43,20 +48,9 @@ const StatItem = ({ icon: Icon, value, suffix, label, prefix = "", delay }: Stat
       className="relative group"
     >
       <div className="glass rounded-2xl p-8 text-center cyber-glow hover:scale-105 transition-all duration-500">
-        <motion.div
-          animate={{ 
-            rotate: [0, 5, -5, 0],
-            scale: [1, 1.1, 1.1, 1]
-          }}
-          transition={{ 
-            duration: 3,
-            repeat: Infinity,
-            repeatDelay: 2
-          }}
-          className="inline-block mb-4"
-        >
+        <div className="inline-block mb-4">
           <Icon className="w-12 h-12 text-primary" />
-        </motion.div>
+        </div>
         <div className="text-4xl md:text-5xl font-bold mb-2">
           <span className="text-gradient">
             {prefix}{count.toLocaleString()}{suffix}

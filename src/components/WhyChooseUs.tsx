@@ -3,11 +3,11 @@ import { Check } from "lucide-react";
 
 const reasons = [
   "End-to-end security woven into every development phase",
-  "Battle-tested solutions deployed across 100+ engagements",
-  "Elite team: CPTS, OSCP, ISO certified experts",
+  "Certified team: CPTS, ISO, CCNA, CEH, EHE, CAP, CNSP & more",
   "24/7 threat monitoring with real-time incident response",
   "From startup MVPs to enterprise-scale infrastructure",
-  "Transparent reporting that actually drives decisions"
+  "Transparent reporting that drives real business decisions",
+  "Proven track record in both security and development excellence"
 ];
 
 export const WhyChooseUs = () => {
@@ -47,12 +47,12 @@ export const WhyChooseUs = () => {
           initial={{ opacity: 0, x: 20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          className="glass rounded-2xl overflow-hidden cyber-glow"
+          className="glass rounded-2xl overflow-hidden cyber-glow p-8 flex items-center justify-center"
         >
           <img
-            src="/lovable-uploads/86329743-ee49-4f2e-96f7-50508436273d.png"
-            alt="Security Operations Center"
-            className="w-full h-full object-cover"
+            src="https://cdn-icons-png.flaticon.com/512/2910/2910791.png"
+            alt="Cybersecurity and Development"
+            className="w-full h-auto max-w-md opacity-80"
           />
         </motion.div>
       </div>

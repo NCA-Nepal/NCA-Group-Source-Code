@@ -45,6 +45,8 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   return (
+    <>
+    {/* Commented out temporarily - will add real testimonials later
     <section className="py-20 overflow-hidden bg-black">
       <div className="container px-4">
         <motion.div
@@ -104,6 +106,8 @@ const TestimonialsSection = () => {
         </div>
       </div>
     </section>
+    */}
+    </>
   );
 };
 
