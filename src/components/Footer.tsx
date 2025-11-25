@@ -1,5 +1,6 @@
 import { Linkedin, Github, Twitter } from "lucide-react";
 import { Button } from "./ui/button";
+import ncaLogo from "@/assets/nca-logo.png";
 
 const Footer = () => {
   return (
@@ -8,9 +9,12 @@ const Footer = () => {
         <div className="glass glass-hover rounded-xl p-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="space-y-4">
-              <h3 className="font-medium text-lg">NCA Security</h3>
-              <p className="text-sm text-muted-foreground">
-                Defense Through Intelligence. Protecting your digital assets with expertise.
+              <div className="flex items-center gap-3">
+                <img src={ncaLogo} alt="NCA" className="w-10 h-10" />
+                <span className="text-2xl font-bold text-gradient">NCA</span>
+              </div>
+              <p className="text-sm text-muted-foreground max-w-xs">
+                Crafting secure, innovative digital solutions for the future.
               </p>
               <div className="flex space-x-2">
                 <Button variant="ghost" size="icon" className="hover:bg-primary/10">
@@ -101,10 +105,10 @@ const Footer = () => {
 
           <div className="mt-8 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} NCA Security. All rights reserved.
+              © {new Date().getFullYear()} NCA. All rights reserved.
             </p>
             <p className="text-sm text-muted-foreground">
-              Defense Through Intelligence.
+              Innovate. Secure. Scale.
             </p>
           </div>
         </div>
