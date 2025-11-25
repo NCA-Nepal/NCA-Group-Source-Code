@@ -11,8 +11,16 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import { ContactSection } from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import ncaLogo from "@/assets/nca-logo.png";
+import LoadingScreen from "@/components/LoadingScreen";
+import { useState } from "react";
 
 const Index = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  if (isLoading) {
+    return <LoadingScreen onComplete={() => setIsLoading(false)} />;
+  }
+
   return (
     <div className="min-h-screen bg-black text-foreground">
       <Navigation />
@@ -114,12 +122,21 @@ const Index = () => {
             transition={{ delay: 0.8 }}
             className="relative mx-auto max-w-5xl"
           >
-            <div className="glass rounded-3xl overflow-hidden cyber-glow p-6 border border-white/10">
-              <img
-                src={ncaLogo}
-                alt="NCA Logo"
-                className="w-full h-auto max-w-md mx-auto"
-              />
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div className="glass rounded-3xl overflow-hidden cyber-glow p-8 border border-white/10">
+                <img
+                  src={ncaLogo}
+                  alt="NCA Logo"
+                  className="w-full h-auto max-w-xs mx-auto drop-shadow-2xl"
+                />
+              </div>
+              <div className="glass rounded-3xl overflow-hidden cyber-glow p-8 border border-white/10 flex items-center justify-center">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/1087/1087815.png"
+                  alt="Security & Development"
+                  className="w-full h-auto max-w-xs opacity-80"
+                />
+              </div>
             </div>
           </motion.div>
         </div>

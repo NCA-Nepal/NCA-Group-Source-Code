@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 import { Badge } from "./ui/badge";
 
 const metrics = [
-  "100+ Successful VAPT Engagements",
-  "24/7 SOC Operations",
-  "Certified Experts: CPTS | OSCP | CEH"
+  "24/7 SOC & Threat Intelligence",
+  "Enterprise-Grade Security Standards",
+  "Certified: CPTS | ISO | CCNA | CEH | EHE | CAP | CNSP | Google Cybersecurity & More"
 ];
 
 export const AboutMission = () => {
