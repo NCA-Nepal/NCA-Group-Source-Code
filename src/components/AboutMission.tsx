@@ -4,7 +4,7 @@ import { Badge } from "./ui/badge";
 const metrics = [
   "24/7 SOC & Threat Intelligence",
   "Enterprise-Grade Security Standards",
-  "Certified: CPTS | ISO | CCNA | CEH | EHE | CAP | CNSP | Google Cybersecurity & More"
+  "Certified: CPTS | ISO | CCNA | CEH | EHE | CAP | CNSP | ISC2 | CCEP | Google Cybersecurity & More"
 ];
 
 export const AboutMission = () => {
