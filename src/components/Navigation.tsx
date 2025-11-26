@@ -56,7 +56,7 @@ const Navigation = () => {
       <div className="mx-auto h-full px-6">
         <nav className="flex items-center justify-between h-full">
           <div className="flex items-center gap-3">
-            <span className="font-bold text-lg text-gradient">NCA</span>
+            <span className="font-bold text-lg text-gradient">N.C.A. Group</span>
           </div>
 
           {/* Desktop Navigation */}

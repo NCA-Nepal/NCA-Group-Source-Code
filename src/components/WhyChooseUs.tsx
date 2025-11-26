@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
+import teamWorkspace from "@/assets/team-workspace.avif";
 
 const reasons = [
   "End-to-end security woven into every development phase",
@@ -47,12 +48,12 @@ export const WhyChooseUs = () => {
           initial={{ opacity: 0, x: 20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          className="glass rounded-2xl overflow-hidden cyber-glow p-8 flex items-center justify-center"
+          className="glass rounded-2xl overflow-hidden cyber-glow"
         >
           <img
-            src="https://cdn-icons-png.flaticon.com/512/2910/2910791.png"
-            alt="Cybersecurity and Development"
-            className="w-full h-auto max-w-md opacity-80"
+            src={teamWorkspace}
+            alt="Professional Workspace"
+            className="w-full h-full object-cover"
           />
         </motion.div>
       </div>

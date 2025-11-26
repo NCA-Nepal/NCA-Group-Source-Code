@@ -4,7 +4,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "./ui/button";
 
 interface Service {
-  icon: React.ElementType;
+  icon: React.ReactNode;
   title: string;
   description: string;
 }
@@ -72,7 +72,9 @@ export const ServicesCarousel = ({ title, subtitle, services, sectionId }: Servi
             >
               <div className="flex flex-col h-full">
                 <div className="p-4 rounded-xl bg-gradient-to-br from-blue-500/20 via-purple-500/20 to-pink-500/20 group-hover:shadow-glow transition-all duration-500 mb-4 inline-block w-fit">
-                  <service.icon className="w-8 h-8 text-gradient" />
+                  <div className="w-8 h-8 text-primary">
+                    {service.icon}
+                  </div>
                 </div>
                 <h3 className="text-xl font-semibold mb-3 group-hover:text-gradient transition-all">
                   {service.title}

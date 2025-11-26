@@ -116,29 +116,6 @@ const Index = () => {
             </Button>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8 }}
-            className="relative mx-auto max-w-5xl"
-          >
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div className="glass rounded-3xl overflow-hidden cyber-glow p-8 border border-white/10">
-                <img
-                  src={ncaLogo}
-                  alt="NCA Logo"
-                  className="w-full h-auto max-w-xs mx-auto drop-shadow-2xl"
-                />
-              </div>
-              <div className="glass rounded-3xl overflow-hidden cyber-glow p-8 border border-white/10 flex items-center justify-center">
-                <img
-                  src="https://cdn-icons-png.flaticon.com/512/1087/1087815.png"
-                  alt="Security & Development"
-                  className="w-full h-auto max-w-xs opacity-80"
-                />
-              </div>
-            </div>
-          </motion.div>
         </div>
       </motion.section>
 
