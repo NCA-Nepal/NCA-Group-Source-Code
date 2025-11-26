@@ -10,7 +10,7 @@ const LoadingScreen = ({ onComplete }: LoadingScreenProps) => {
     <motion.div
       initial={{ opacity: 1 }}
       animate={{ opacity: 0 }}
-      transition={{ delay: 2, duration: 0.6 }}
+      transition={{ delay: 1.2, duration: 0.5 }}
       onAnimationComplete={onComplete}
       className="fixed inset-0 z-50 bg-black flex items-center justify-center"
     >
@@ -23,7 +23,7 @@ const LoadingScreen = ({ onComplete }: LoadingScreenProps) => {
           opacity: [0, 1, 1]
         }}
         transition={{ 
-          duration: 1.8,
+          duration: 1,
           times: [0, 0.5, 1],
           ease: "easeOut"
         }}

@@ -37,6 +37,14 @@ const Index = () => {
           <div className="gradient-orb w-[600px] h-[600px] bg-blue-500 top-0 left-0" />
           <div className="gradient-orb w-[500px] h-[500px] bg-purple-500 top-1/3 right-1/4" style={{ animationDelay: '2s' }} />
           <div className="gradient-orb w-[400px] h-[400px] bg-pink-500 bottom-0 right-0" style={{ animationDelay: '4s' }} />
+          
+          {/* NCA Logo Background */}
+          <img 
+            src={ncaLogo} 
+            alt="" 
+            className="absolute top-1/4 right-1/4 w-96 h-96 opacity-5 rotate-12 pointer-events-none"
+            loading="eager"
+          />
         </div>
         
         <motion.div
