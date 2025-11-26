@@ -72,7 +72,7 @@ export const ServicesCarousel = ({ title, subtitle, services, sectionId }: Servi
             >
               <div className="flex flex-col h-full">
                 <div className="p-4 rounded-xl bg-gradient-to-br from-blue-500/20 via-purple-500/20 to-pink-500/20 group-hover:shadow-glow transition-all duration-500 mb-4 inline-block w-fit">
-                  <div className="w-8 h-8 text-primary">
+                  <div className="w-8 h-8 text-primary flex items-center justify-center">
                     {service.icon}
                   </div>
                 </div>

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
-import teamWorkspace from "@/assets/team-workspace.avif";
+import codingWorkspace from "@/assets/coding-workspace.jpg";
 
 const reasons = [
   "End-to-end security woven into every development phase",
@@ -51,9 +51,10 @@ export const WhyChooseUs = () => {
           className="glass rounded-2xl overflow-hidden cyber-glow"
         >
           <img
-            src={teamWorkspace}
-            alt="Professional Workspace"
+            src={codingWorkspace}
+            alt="Cybersecurity and Development Workspace"
             className="w-full h-full object-cover"
+            loading="lazy"
           />
         </motion.div>
       </div>
