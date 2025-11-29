@@ -44,22 +44,25 @@ export const ContactSection = () => {
               </div>
             </motion.a>
 
-            {/* Location */}
-            <motion.div
+            {/* Career */}
+            <motion.a
+              href="/career"
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
-              className="flex items-center gap-4 p-6 rounded-xl bg-white/5 border border-white/10"
+              className="flex items-center gap-4 p-6 rounded-xl bg-white/5 hover:bg-white/10 transition-all duration-300 group border border-white/10 hover:border-primary/30"
             >
-              <div className="p-3 rounded-lg bg-gradient-to-br from-purple-500/20 to-pink-500/20">
+              <div className="p-3 rounded-lg bg-gradient-to-br from-purple-500/20 to-pink-500/20 group-hover:shadow-glow transition-all">
                 <MapPin className="w-6 h-6 text-primary" />
               </div>
               <div>
-                <p className="text-sm text-muted-foreground mb-1">Location</p>
-                <p className="text-lg font-semibold">Kathmandu, Nepal</p>
+                <p className="text-sm text-muted-foreground mb-1">Want to Work With Us?</p>
+                <p className="text-lg font-semibold group-hover:text-gradient transition-all">
+                  View Career Page
+                </p>
               </div>
-            </motion.div>
+            </motion.a>
 
             {/* Social Links */}
             <motion.div
