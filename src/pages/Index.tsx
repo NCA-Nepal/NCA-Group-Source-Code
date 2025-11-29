@@ -34,17 +34,10 @@ const Index = () => {
       >
         {/* Animated Background Effects */}
         <div className="absolute inset-0 -z-10 overflow-hidden">
-          {/* Primary gradient orbs with enhanced glow */}
-          <div className="gradient-orb w-[700px] h-[700px] bg-gradient-to-br from-blue-500 to-blue-600 top-[-100px] left-[-100px] blur-3xl" />
-          <div className="gradient-orb w-[600px] h-[600px] bg-gradient-to-br from-purple-500 to-purple-600 top-[20%] right-[10%] blur-3xl opacity-80" style={{ animationDelay: '2s' }} />
-          <div className="gradient-orb w-[500px] h-[500px] bg-gradient-to-br from-pink-500 to-pink-600 bottom-[-50px] right-[-50px] blur-3xl opacity-70" style={{ animationDelay: '4s' }} />
-          
-          {/* Secondary ambient glow layers */}
-          <div className="absolute top-[30%] left-[20%] w-[400px] h-[400px] bg-blue-400/20 rounded-full blur-[100px] animate-pulse" style={{ animationDuration: '4s' }} />
-          <div className="absolute bottom-[20%] right-[30%] w-[350px] h-[350px] bg-purple-400/20 rounded-full blur-[100px] animate-pulse" style={{ animationDuration: '5s', animationDelay: '1s' }} />
-          
-          {/* Subtle grid overlay for depth */}
-          <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:50px_50px] [mask-image:radial-gradient(ellipse_at_center,black_20%,transparent_80%)]" />
+          {/* Subtle gradient orbs */}
+          <div className="absolute w-[500px] h-[500px] bg-blue-500/10 top-[-150px] left-[-150px] rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '8s' }} />
+          <div className="absolute w-[400px] h-[400px] bg-purple-500/10 top-[10%] right-[5%] rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '10s', animationDelay: '2s' }} />
+          <div className="absolute w-[350px] h-[350px] bg-blue-400/8 bottom-[-100px] right-[-100px] rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '12s', animationDelay: '4s' }} />
         </div>
         
         <motion.div
