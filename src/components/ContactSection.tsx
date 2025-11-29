@@ -3,9 +3,9 @@ import { Mail, MapPin, Linkedin, Github, Twitter } from "lucide-react";
 
 export const ContactSection = () => {
   return (
-    <section id="contact" className="container px-4 py-24 relative">
+    <section id="contact" className="container px-4 py-16 sm:py-24 relative overflow-visible">
       {/* Animated Background */}
-      <div className="gradient-orb w-96 h-96 bg-blue-500 top-0 right-1/4" style={{ animationDelay: '0s' }} />
+      <div className="absolute w-64 sm:w-96 h-64 sm:h-96 bg-blue-500/10 top-0 right-1/4 rounded-full blur-[100px] animate-pulse pointer-events-none" style={{ animationDuration: '8s' }} />
       
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -13,16 +13,16 @@ export const ContactSection = () => {
         viewport={{ once: true }}
         className="max-w-4xl mx-auto relative z-10"
       >
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
             Let's Talk <span className="text-gradient">Innovation & Security</span>
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-base sm:text-lg text-muted-foreground px-4">
             Reach out to our experts — we'll respond within 24 hours.
           </p>
         </div>
 
-        <div className="glass rounded-3xl p-8 md:p-12 cyber-glow">
+        <div className="glass rounded-2xl sm:rounded-3xl p-4 sm:p-8 md:p-12 cyber-glow">
           <div className="grid gap-8">
             {/* Email */}
             <motion.a
