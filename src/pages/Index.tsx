@@ -9,6 +9,7 @@ import { securityServices, developmentServices } from "@/config/services";
 import { WhyChooseUs } from "@/components/WhyChooseUs";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import { ContactSection } from "@/components/ContactSection";
+import { ContactForm } from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 import ncaLogo from "@/assets/nca-logo.png";
 import LoadingScreen from "@/components/LoadingScreen";
@@ -30,14 +31,14 @@ const Index = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="relative container px-4 pt-40 pb-20 overflow-hidden"
+        className="relative container px-4 pt-28 sm:pt-36 md:pt-40 pb-12 sm:pb-16 md:pb-20 overflow-visible"
       >
         {/* Animated Background Effects */}
-        <div className="absolute inset-0 -z-10 overflow-hidden">
+        <div className="absolute inset-0 -z-10 overflow-visible">
           {/* Subtle gradient orbs */}
-          <div className="absolute w-[500px] h-[500px] bg-blue-500/10 top-[-150px] left-[-150px] rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '8s' }} />
-          <div className="absolute w-[400px] h-[400px] bg-purple-500/10 top-[10%] right-[5%] rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '10s', animationDelay: '2s' }} />
-          <div className="absolute w-[350px] h-[350px] bg-blue-400/8 bottom-[-100px] right-[-100px] rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '12s', animationDelay: '4s' }} />
+          <div className="absolute w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] bg-blue-500/10 top-[-100px] sm:top-[-150px] left-[-100px] sm:left-[-150px] rounded-full blur-[100px] sm:blur-[120px] animate-pulse pointer-events-none" style={{ animationDuration: '8s' }} />
+          <div className="absolute w-[250px] sm:w-[400px] h-[250px] sm:h-[400px] bg-purple-500/10 top-[5%] sm:top-[10%] right-[0%] sm:right-[5%] rounded-full blur-[100px] sm:blur-[120px] animate-pulse pointer-events-none" style={{ animationDuration: '10s', animationDelay: '2s' }} />
+          <div className="absolute w-[200px] sm:w-[350px] h-[200px] sm:h-[350px] bg-blue-400/8 bottom-[-50px] sm:bottom-[-100px] right-[-50px] sm:right-[-100px] rounded-full blur-[100px] sm:blur-[120px] animate-pulse pointer-events-none" style={{ animationDuration: '12s', animationDelay: '4s' }} />
         </div>
         
         <motion.div
@@ -201,6 +202,9 @@ const Index = () => {
       <div className="bg-gradient-to-b from-background to-black">
         <ContactSection />
       </div>
+
+      {/* Contact Form */}
+      <ContactForm />
 
       {/* Footer */}
       <div className="bg-black">

@@ -52,6 +52,11 @@ const Footer = () => {
                     Contact
                   </a>
                 </li>
+                <li>
+                  <a href="/career" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                    Career
+                  </a>
+                </li>
               </ul>
             </div>
 

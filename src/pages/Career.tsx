@@ -101,17 +101,85 @@ const Career = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="container px-4 pt-32 pb-20"
+        className="container px-4 pt-24 sm:pt-32 pb-12 sm:pb-20"
       >
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12 sm:mb-16">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 sm:mb-6">
               Join <span className="text-gradient">N.C.A. Group</span>
             </h1>
-            <p className="text-xl text-muted-foreground mb-4">
-              Don't see any open positions? No problem!
+            <p className="text-lg sm:text-xl text-muted-foreground px-4">
+              Be part of a team that develops secure software
             </p>
-            <p className="text-lg text-muted-foreground">
+          </div>
+
+          {/* Open Positions Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="mb-16 sm:mb-20"
+          >
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8 text-center">
+              Currently Open Positions
+            </h2>
+            <div className="grid gap-6">
+              {/* Position Card 1 */}
+              <div className="glass rounded-2xl p-6 md:p-8 cyber-glow hover:border-primary/30 transition-all">
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                  <div>
+                    <h3 className="text-2xl font-bold mb-2">Senior Security Analyst</h3>
+                    <p className="text-muted-foreground mb-4">Full-time • Remote/Hybrid • Kathmandu</p>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">VAPT</span>
+                      <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">Red Team</span>
+                      <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">5+ years</span>
+                    </div>
+                  </div>
+                  <Button className="button-gradient whitespace-nowrap">Apply Now</Button>
+                </div>
+              </div>
+
+              {/* Position Card 2 */}
+              <div className="glass rounded-2xl p-6 md:p-8 cyber-glow hover:border-primary/30 transition-all">
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                  <div>
+                    <h3 className="text-2xl font-bold mb-2">Full Stack Developer</h3>
+                    <p className="text-muted-foreground mb-4">Full-time • Remote/Hybrid • Kathmandu</p>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">React</span>
+                      <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">Node.js</span>
+                      <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">3+ years</span>
+                    </div>
+                  </div>
+                  <Button className="button-gradient whitespace-nowrap">Apply Now</Button>
+                </div>
+              </div>
+
+              {/* Position Card 3 */}
+              <div className="glass rounded-2xl p-6 md:p-8 cyber-glow hover:border-primary/30 transition-all">
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                  <div>
+                    <h3 className="text-2xl font-bold mb-2">DevOps Engineer</h3>
+                    <p className="text-muted-foreground mb-4">Full-time • Remote/Hybrid • Kathmandu</p>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">AWS</span>
+                      <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">Docker</span>
+                      <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">3+ years</span>
+                    </div>
+                  </div>
+                  <Button className="button-gradient whitespace-nowrap">Apply Now</Button>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* General Application Section */}
+          <div className="text-center mb-6 sm:mb-8">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 px-4">
+              Don't See Any Open Positions? <span className="text-gradient">No Problem!</span>
+            </h2>
+            <p className="text-base sm:text-lg text-muted-foreground px-4">
               Apply below with what you can help us with, and we'll reach out if there's a match.
             </p>
           </div>
@@ -120,7 +188,7 @@ const Career = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="glass rounded-3xl p-8 md:p-12 cyber-glow"
+            className="glass rounded-2xl sm:rounded-3xl p-4 sm:p-8 md:p-12 cyber-glow"
           >
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
