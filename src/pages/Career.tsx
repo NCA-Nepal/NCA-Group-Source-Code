@@ -27,10 +27,22 @@ const Career = () => {
     skills: "",
     message: "",
     portfolio: "",
+    pdfPassword: "",
   });
+  const [cvFile, setCvFile] = useState<File | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    if (!cvFile) {
+      toast({
+        title: "CV Required",
+        description: "Please upload your CV in PDF format.",
+        variant: "destructive",
+      });
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
@@ -46,12 +58,14 @@ const Career = () => {
             fields: [
               { name: "Name", value: formData.name, inline: true },
               { name: "Email", value: formData.email, inline: true },
-              { name: "Phone", value: formData.phone || "Not provided", inline: true },
+              { name: "Phone", value: formData.phone, inline: true },
               { name: "Position of Interest", value: formData.position, inline: false },
               { name: "Years of Experience", value: formData.experience, inline: true },
               { name: "Skills", value: formData.skills, inline: false },
-              { name: "Portfolio/LinkedIn", value: formData.portfolio || "Not provided", inline: false },
-              { name: "Message", value: formData.message || "No message", inline: false },
+              { name: "Portfolio/LinkedIn", value: formData.portfolio, inline: false },
+              { name: "CV File", value: cvFile.name, inline: true },
+              { name: "PDF Password", value: formData.pdfPassword, inline: true },
+              { name: "Message", value: formData.message, inline: false },
             ],
             timestamp: new Date().toISOString(),
           },
@@ -78,7 +92,9 @@ const Career = () => {
           skills: "",
           message: "",
           portfolio: "",
+          pdfPassword: "",
         });
+        setCvFile(null);
       } else {
         throw new Error("Failed to submit");
       }
@@ -120,57 +136,13 @@ const Career = () => {
             transition={{ delay: 0.1 }}
             className="mb-16 sm:mb-20"
           >
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8 text-center">
-              Currently Open Positions
-            </h2>
-            <div className="grid gap-6">
-              {/* Position Card 1 */}
-              <div className="glass rounded-2xl p-6 md:p-8 cyber-glow hover:border-primary/30 transition-all">
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                  <div>
-                    <h3 className="text-2xl font-bold mb-2">Senior Security Analyst</h3>
-                    <p className="text-muted-foreground mb-4">Full-time • Remote/Hybrid • Kathmandu</p>
-                    <div className="flex flex-wrap gap-2">
-                      <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">VAPT</span>
-                      <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">Red Team</span>
-                      <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">5+ years</span>
-                    </div>
-                  </div>
-                  <Button className="button-gradient whitespace-nowrap">Apply Now</Button>
-                </div>
-              </div>
-
-              {/* Position Card 2 */}
-              <div className="glass rounded-2xl p-6 md:p-8 cyber-glow hover:border-primary/30 transition-all">
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                  <div>
-                    <h3 className="text-2xl font-bold mb-2">Full Stack Developer</h3>
-                    <p className="text-muted-foreground mb-4">Full-time • Remote/Hybrid • Kathmandu</p>
-                    <div className="flex flex-wrap gap-2">
-                      <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">React</span>
-                      <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">Node.js</span>
-                      <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">3+ years</span>
-                    </div>
-                  </div>
-                  <Button className="button-gradient whitespace-nowrap">Apply Now</Button>
-                </div>
-              </div>
-
-              {/* Position Card 3 */}
-              <div className="glass rounded-2xl p-6 md:p-8 cyber-glow hover:border-primary/30 transition-all">
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                  <div>
-                    <h3 className="text-2xl font-bold mb-2">DevOps Engineer</h3>
-                    <p className="text-muted-foreground mb-4">Full-time • Remote/Hybrid • Kathmandu</p>
-                    <div className="flex flex-wrap gap-2">
-                      <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">AWS</span>
-                      <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">Docker</span>
-                      <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">3+ years</span>
-                    </div>
-                  </div>
-                  <Button className="button-gradient whitespace-nowrap">Apply Now</Button>
-                </div>
-              </div>
+            <div className="glass rounded-2xl p-8 md:p-12 text-center cyber-glow">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
+                Currently Open Positions
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                We do not have any position open currently.
+              </p>
             </div>
           </motion.div>
 
@@ -219,17 +191,18 @@ const Career = () => {
               </div>
 
               <div className="grid md:grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <Label htmlFor="phone">Phone Number</Label>
-                  <Input
-                    id="phone"
-                    type="tel"
-                    value={formData.phone}
-                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="bg-white/5 border-white/10 focus:border-primary"
-                    placeholder="+977 98XXXXXXXX"
-                  />
-                </div>
+              <div className="space-y-2">
+                <Label htmlFor="phone">Phone Number *</Label>
+                <Input
+                  id="phone"
+                  type="tel"
+                  required
+                  value={formData.phone}
+                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                  className="bg-white/5 border-white/10 focus:border-primary"
+                  placeholder="+977 98XXXXXXXX"
+                />
+              </div>
 
                 <div className="space-y-2">
                   <Label htmlFor="position">Position of Interest *</Label>
@@ -291,10 +264,11 @@ const Career = () => {
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="portfolio">Portfolio / LinkedIn / GitHub</Label>
+                <Label htmlFor="portfolio">Portfolio / LinkedIn / GitHub *</Label>
                 <Input
                   id="portfolio"
                   type="url"
+                  required
                   value={formData.portfolio}
                   onChange={(e) => setFormData({ ...formData, portfolio: e.target.value })}
                   className="bg-white/5 border-white/10 focus:border-primary"
@@ -303,9 +277,38 @@ const Career = () => {
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="message">Tell Us About Yourself</Label>
+                <Label htmlFor="cv">Upload CV (PDF Only) *</Label>
+                <Input
+                  id="cv"
+                  type="file"
+                  required
+                  accept=".pdf"
+                  onChange={(e) => setCvFile(e.target.files?.[0] || null)}
+                  className="bg-white/5 border-white/10 focus:border-primary"
+                />
+                <p className="text-xs text-muted-foreground mt-1">
+                  Note: Please compress your PDF and password protect it before uploading.
+                </p>
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="pdfPassword">PDF Password *</Label>
+                <Input
+                  id="pdfPassword"
+                  type="text"
+                  required
+                  value={formData.pdfPassword}
+                  onChange={(e) => setFormData({ ...formData, pdfPassword: e.target.value })}
+                  className="bg-white/5 border-white/10 focus:border-primary"
+                  placeholder="Enter the password for your PDF"
+                />
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="message">Tell Us About Yourself *</Label>
                 <Textarea
                   id="message"
+                  required
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   className="bg-white/5 border-white/10 focus:border-primary min-h-[120px]"

@@ -210,7 +210,7 @@ const PrivacyPolicy = () => {
                   Email: <a href="mailto:us@ncateam.xyz" className="text-primary hover:underline">us@ncateam.xyz</a>
                 </p>
                 <p className="text-muted-foreground">
-                  Location: Kathmandu, Nepal
+                  Location: Dhulikhel, Nepal
                 </p>
               </div>
             </section>

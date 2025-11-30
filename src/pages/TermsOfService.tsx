@@ -174,14 +174,14 @@ const TermsOfService = () => {
             <section>
               <h2 className="text-2xl font-bold mb-4">Dispute Resolution</h2>
               <p className="text-muted-foreground leading-relaxed">
-                Any disputes arising from these Terms or your use of our Services shall first be resolved through good-faith negotiation. If negotiations fail, disputes shall be resolved through binding arbitration in accordance with the laws of Nepal. The arbitration shall be conducted in Kathmandu, Nepal, and the decision of the arbitrator shall be final and binding.
+                Any disputes arising from these Terms or your use of our Services shall first be resolved through good-faith negotiation. If negotiations fail, disputes shall be resolved through binding arbitration in accordance with the laws of Nepal. The arbitration shall be conducted in Dhulikhel, Nepal, and the decision of the arbitrator shall be final and binding.
               </p>
             </section>
 
             <section>
               <h2 className="text-2xl font-bold mb-4">Governing Law</h2>
               <p className="text-muted-foreground leading-relaxed">
-                These Terms shall be governed by and construed in accordance with the laws of Nepal, without regard to its conflict of law provisions. You agree to submit to the exclusive jurisdiction of the courts located in Kathmandu, Nepal.
+                These Terms shall be governed by and construed in accordance with the laws of Nepal, without regard to its conflict of law provisions. You agree to submit to the exclusive jurisdiction of the courts located in Dhulikhel, Nepal.
               </p>
             </section>
 
@@ -219,7 +219,7 @@ const TermsOfService = () => {
                   Email: <a href="mailto:us@ncateam.xyz" className="text-primary hover:underline">us@ncateam.xyz</a>
                 </p>
                 <p className="text-muted-foreground">
-                  Location: Kathmandu, Nepal
+                  Location: Dhulikhel, Nepal
                 </p>
               </div>
             </section>

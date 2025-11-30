@@ -22,7 +22,6 @@ export const ContactForm = () => {
     phone: "",
     company: "",
     subject: "",
-    budget: "",
     timeline: "",
     message: "",
   });
@@ -47,7 +46,6 @@ export const ContactForm = () => {
               { name: "Phone", value: formData.phone || "Not provided", inline: true },
               { name: "Company", value: formData.company || "Not provided", inline: true },
               { name: "Subject", value: formData.subject, inline: false },
-              { name: "Budget Range", value: formData.budget, inline: true },
               { name: "Timeline", value: formData.timeline, inline: true },
               { name: "Message", value: formData.message || "No message", inline: false },
             ],
@@ -73,7 +71,6 @@ export const ContactForm = () => {
           phone: "",
           company: "",
           subject: "",
-          budget: "",
           timeline: "",
           message: "",
         });
@@ -104,10 +101,10 @@ export const ContactForm = () => {
       >
         <div className="text-center mb-8 sm:mb-12">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
-            Let's Build Something <span className="text-gradient">Secure Together</span>
+            Let's Talk <span className="text-gradient">Innovation & Security</span>
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground px-4">
-            Tell us about your project and we'll respond within 24 hours
+            Reach out to our experts — we'll respond within 24 hours.
           </p>
         </div>
 
@@ -196,47 +193,24 @@ export const ContactForm = () => {
               </Select>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="space-y-2">
-                <Label htmlFor="budget">Budget Range *</Label>
-                <Select
-                  required
-                  value={formData.budget}
-                  onValueChange={(value) => setFormData({ ...formData, budget: value })}
-                >
-                  <SelectTrigger className="bg-white/5 border-white/10 focus:border-primary">
-                    <SelectValue placeholder="Select budget range" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="under-5k">Under $5,000</SelectItem>
-                    <SelectItem value="5k-10k">$5,000 - $10,000</SelectItem>
-                    <SelectItem value="10k-25k">$10,000 - $25,000</SelectItem>
-                    <SelectItem value="25k-50k">$25,000 - $50,000</SelectItem>
-                    <SelectItem value="50k-plus">$50,000+</SelectItem>
-                    <SelectItem value="not-sure">Not Sure Yet</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
-
-              <div className="space-y-2">
-                <Label htmlFor="timeline">Project Timeline *</Label>
-                <Select
-                  required
-                  value={formData.timeline}
-                  onValueChange={(value) => setFormData({ ...formData, timeline: value })}
-                >
-                  <SelectTrigger className="bg-white/5 border-white/10 focus:border-primary">
-                    <SelectValue placeholder="Select timeline" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="urgent">Urgent (Within 1 month)</SelectItem>
-                    <SelectItem value="1-3-months">1-3 months</SelectItem>
-                    <SelectItem value="3-6-months">3-6 months</SelectItem>
-                    <SelectItem value="6-plus-months">6+ months</SelectItem>
-                    <SelectItem value="flexible">Flexible</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
+            <div className="space-y-2">
+              <Label htmlFor="timeline">Project Timeline *</Label>
+              <Select
+                required
+                value={formData.timeline}
+                onValueChange={(value) => setFormData({ ...formData, timeline: value })}
+              >
+                <SelectTrigger className="bg-white/5 border-white/10 focus:border-primary">
+                  <SelectValue placeholder="Select timeline" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="urgent">Urgent (Within 1 month)</SelectItem>
+                  <SelectItem value="1-3-months">1-3 months</SelectItem>
+                  <SelectItem value="3-6-months">3-6 months</SelectItem>
+                  <SelectItem value="6-plus-months">6+ months</SelectItem>
+                  <SelectItem value="flexible">Flexible</SelectItem>
+                </SelectContent>
+              </Select>
             </div>
 
             <div className="space-y-2">

@@ -162,9 +162,10 @@ const Index = () => {
       </div>
 
       {/* CTA Section */}
-      <section className="container px-4 py-24 relative bg-background overflow-hidden">
-        <div className="gradient-orb w-[500px] h-[500px] bg-gradient-to-br from-blue-500 to-blue-600 top-1/2 left-0 blur-3xl" />
-        <div className="gradient-orb w-[500px] h-[500px] bg-gradient-to-br from-purple-500 to-purple-600 top-1/2 right-0 blur-3xl" style={{ animationDelay: '2s' }} />
+      <section className="container px-4 py-24 relative bg-background overflow-visible">
+        <div className="gradient-orb w-[500px] h-[500px] bg-gradient-to-br from-blue-500/20 to-blue-600/20 top-1/2 -left-64 blur-[150px]" />
+        <div className="gradient-orb w-[500px] h-[500px] bg-gradient-to-br from-purple-500/20 to-purple-600/20 top-1/2 -right-64 blur-[150px]" style={{ animationDelay: '2s' }} />
+        <div className="gradient-orb w-[400px] h-[400px] bg-gradient-to-br from-pink-500/15 to-pink-600/15 bottom-0 left-1/2 -translate-x-1/2 blur-[120px]" style={{ animationDelay: '4s' }} />
         
         <motion.div
           initial={{ opacity: 0, y: 20 }}
