@@ -35,9 +35,9 @@ export const ServicesCarousel = ({ title, subtitle, services, sectionId }: Servi
   );
 
   return (
-    <section id={sectionId} className="container px-4 py-24 relative overflow-hidden">
+    <section id={sectionId} className="container px-4 py-24 relative overflow-visible">
       {/* Animated Background */}
-      <div className="gradient-orb w-96 h-96 bg-pink-500 top-1/4 right-0" style={{ animationDelay: '1s' }} />
+      <div className="gradient-orb w-96 h-96 bg-pink-500/20 top-1/4 -right-48 blur-[120px]" style={{ animationDelay: '1s' }} />
       
       <motion.div
         initial={{ opacity: 0, y: 20 }}
