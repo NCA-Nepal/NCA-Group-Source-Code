@@ -63,7 +63,6 @@ const Career = () => {
               { name: "Years of Experience", value: formData.experience, inline: true },
               { name: "Skills", value: formData.skills, inline: false },
               { name: "Portfolio/LinkedIn", value: formData.portfolio, inline: false },
-              { name: "CV File", value: cvFile.name, inline: true },
               { name: "PDF Password", value: formData.pdfPassword, inline: true },
               { name: "Message", value: formData.message, inline: false },
             ],
@@ -72,10 +71,14 @@ const Career = () => {
         ],
       };
 
+      // Create FormData for multipart/form-data submission
+      const formDataToSend = new FormData();
+      formDataToSend.append("payload_json", JSON.stringify(payload));
+      formDataToSend.append("file", cvFile);
+
       const response = await fetch(webhookUrl, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
+        body: formDataToSend,
       });
 
       if (response.ok) {
