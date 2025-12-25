@@ -48,7 +48,7 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="#contact" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  <a href="#contact-form" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                     Contact
                   </a>
                 </li>
@@ -106,7 +106,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a 
-                    href="https://calendly.com/rezydev/30min"
+                    href="https://calendly.com/ncagroup/30min"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-sm text-muted-foreground hover:text-primary transition-colors"

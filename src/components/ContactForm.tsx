@@ -80,7 +80,7 @@ export const ContactForm = () => {
     } catch (error) {
       toast({
         title: "Submission Failed",
-        description: "Please try again or email us directly at us@ncateam.xyz",
+        description: "Please try again or email us directly at info@ncagroup.com.np",
         variant: "destructive",
       });
     } finally {
@@ -235,8 +235,8 @@ export const ContactForm = () => {
 
             <p className="text-sm text-muted-foreground text-center">
               Or email us directly at{" "}
-              <a href="mailto:us@ncateam.xyz" className="text-primary hover:underline">
-                us@ncateam.xyz
+              <a href="mailto:info@ncagroup.com.np" className="text-primary hover:underline">
+                info@ncagroup.com.np
               </a>
             </p>
           </form>

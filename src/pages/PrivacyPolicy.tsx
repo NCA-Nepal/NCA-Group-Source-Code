@@ -207,7 +207,7 @@ const PrivacyPolicy = () => {
                   <strong>N.C.A. Group Pvt. Ltd.</strong>
                 </p>
                 <p className="text-muted-foreground">
-                  Email: <a href="mailto:us@ncateam.xyz" className="text-primary hover:underline">us@ncateam.xyz</a>
+                  Email: <a href="mailto:info@ncagroup.com.np" className="text-primary hover:underline">info@ncagroup.com.np</a>
                 </p>
                 <p className="text-muted-foreground">
                   Location: Dhulikhel, Nepal
