@@ -26,7 +26,7 @@ export const ContactSection = () => {
           <div className="grid gap-8">
             {/* Email */}
             <motion.a
-              href="mailto:us@ncateam.xyz"
+              href="mailto:info@ncagroup.com.np"
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -39,7 +39,7 @@ export const ContactSection = () => {
               <div>
                 <p className="text-sm text-muted-foreground mb-1">Email Us</p>
                 <p className="text-lg font-semibold group-hover:text-gradient transition-all">
-                  us@ncateam.xyz
+                  info@ncagroup.com.np
                 </p>
               </div>
             </motion.a>

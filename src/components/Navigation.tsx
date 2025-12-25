@@ -58,7 +58,7 @@ const Navigation = () => {
   const navItems = [
     { name: "Services", href: "#security-services", onClick: () => scrollToSection('security-services') },
     { name: "About", href: "#about", onClick: () => scrollToSection('about') },
-    { name: "Contact", href: "#contact", onClick: () => scrollToSection('contact') },
+    { name: "Contact", href: "#contact-form", onClick: () => scrollToSection('contact-form') },
     { name: "Career", href: "/career", onClick: () => navigate('/career') },
   ];
 
@@ -94,7 +94,7 @@ const Navigation = () => {
               </a>
             ))}
             <Button 
-              onClick={() => window.open('https://calendly.com/rezydev/30min', '_blank')}
+              onClick={() => window.open('https://calendly.com/ncagroup/30min', '_blank')}
               size="sm"
               className="button-gradient whitespace-nowrap"
             >
@@ -131,7 +131,7 @@ const Navigation = () => {
                   <Button 
                     onClick={() => {
                       setIsMobileMenuOpen(false);
-                      window.open('https://calendly.com/rezydev/30min', '_blank');
+                      window.open('https://calendly.com/ncagroup/30min', '_blank');
                     }}
                     className="button-gradient mt-4"
                   >

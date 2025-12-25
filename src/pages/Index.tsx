@@ -126,7 +126,7 @@ const Index = () => {
         }} transition={{
           delay: 0.7
         }} className="flex flex-col sm:flex-row gap-4 items-start mb-20">
-            <Button size="lg" className="button-gradient text-base px-8 py-6 rounded-full shadow-[0_0_40px_rgba(59,130,246,0.3)] hover:shadow-[0_0_60px_rgba(59,130,246,0.5)] transition-all duration-300" onClick={() => window.open('https://calendly.com/rezydev/30min', '_blank')}>
+            <Button size="lg" className="button-gradient text-base px-8 py-6 rounded-full shadow-[0_0_40px_rgba(59,130,246,0.3)] hover:shadow-[0_0_60px_rgba(59,130,246,0.5)] transition-all duration-300" onClick={() => window.open('https://calendly.com/ncagroup/30min', '_blank')}>
               Book a Consultation →
             </Button>
             <Button size="lg" variant="outline" className="border-white/30 hover:border-primary hover:bg-white/10 text-base px-8 py-6 rounded-full backdrop-blur-sm hover:shadow-[0_0_30px_rgba(168,85,247,0.2)] transition-all duration-300" onClick={() => document.getElementById('security-services')?.scrollIntoView({
@@ -195,10 +195,10 @@ const Index = () => {
             Let's build something extraordinary together. Book a free consultation and discover how we can elevate your business with secure, innovative solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="button-gradient px-8 py-6 text-base rounded-full shadow-[0_0_40px_rgba(59,130,246,0.3)] hover:shadow-[0_0_60px_rgba(59,130,246,0.5)] transition-all duration-300" onClick={() => window.open('https://calendly.com/rezydev/30min', '_blank')}>
+            <Button size="lg" className="button-gradient px-8 py-6 text-base rounded-full shadow-[0_0_40px_rgba(59,130,246,0.3)] hover:shadow-[0_0_60px_rgba(59,130,246,0.5)] transition-all duration-300" onClick={() => window.open('https://calendly.com/ncagroup/30min', '_blank')}>
               Book a 30-Minute Call →
             </Button>
-            <Button size="lg" variant="outline" className="border-white/30 hover:border-primary hover:bg-white/10 px-8 py-6 text-base rounded-full backdrop-blur-sm hover:shadow-[0_0_30px_rgba(168,85,247,0.2)] transition-all duration-300" onClick={() => document.getElementById('contact')?.scrollIntoView({
+            <Button size="lg" variant="outline" className="border-white/30 hover:border-primary hover:bg-white/10 px-8 py-6 text-base rounded-full backdrop-blur-sm hover:shadow-[0_0_30px_rgba(168,85,247,0.2)] transition-all duration-300" onClick={() => document.getElementById('contact-form')?.scrollIntoView({
             behavior: 'smooth'
           })}>
               Contact Us
